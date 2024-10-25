@@ -1,0 +1,103 @@
+.speaker-modal__content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.speaker-modal__image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px; /* Space between image and text */
+}
+
+.speaker-modal__text {
+    flex: 1;
+    text-align: justify; /* Justify text */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh; 
+}
+
+.sidebar {
+    width: 250px; /* Width of the sidebar */
+    background-color: #f4f4f4; /* Light background for sidebar */
+    padding: 1rem;
+    border-right: 2px solid #ccc; /* Right border for visual separation */
+    overflow-y: auto; /* Allow vertical scrolling */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+}
+
+.sidebar__title {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.speaker-slider__wrapper {
+    display: flex;
+    flex-direction: column; /* Stack the speaker cards vertically */
+    overflow-y: auto; /* Allow vertical scrolling in the card area */
+}
+
+.speaker-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 100%; /* Full width of sidebar */
+    margin: 0.5rem 0; /* Margin for spacing */
+    text-align: center;
+}
+
+.speaker-card__image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits the circular shape properly */
+}
+
+.speaker-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.speaker-modal__content {
+    background-color: lightgreen; /* Set background color to light green */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.speaker-modal__close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.speaker-modal__close:hover,
+.speaker-modal__close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
